@@ -1,6 +1,9 @@
+import axios from 'axios';
+
 export const FETCH_EXPENSES = 'FETCH_EXPENSES';
 
 export function fetchExpenses() {
+
     return {
         type: FETCH_EXPENSES,
         payload: {expenses: [

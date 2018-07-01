@@ -15,5 +15,4 @@ class Expense extends Component {
     }
 }
 
-
 export default Expense;
