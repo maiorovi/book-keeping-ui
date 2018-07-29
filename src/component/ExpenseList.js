@@ -12,14 +12,15 @@ class ExpenseList extends Component {
     render() {
         return (
             <div id="expense-list-page">
+                <p className={"h1"}>Expenses Summary</p>
                 <ActionPanel />
                 <div>
-                    <table>
-                        <thead>
+                    <table className={"table table-striped"}>
+                        <thead className={"thead-light"}>
                         <tr>
-                            <td>Description</td>
-                            <td>Amount</td>
-                            <td>Currency</td>
+                            <th scope={"col"}>Description</th>
+                            <th scope={"col"}>Amount</th>
+                            <th scope={"col"}>Currency</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -40,5 +41,4 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, {fetchExpenses})(ExpenseList);
-// export default ExpenseList;
 

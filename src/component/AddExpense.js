@@ -6,23 +6,29 @@ import {connect} from 'react-redux';
 class AddExpense extends Component {
 
     render() {
-        const { handleSubmit } = this.props;
+        const {handleSubmit} = this.props;
 
         return (
-            <form onSubmit={handleSubmit(this.handleSubmit.bind(this))}>
-                <div>
+
+            <form onSubmit={handleSubmit(this.handleSubmit.bind(this))} className={"col-4 offset-md-4"}>
+                <p className={"h1"}>Add Expense</p>
+                <div className={"form-group"}>
                     <label>Description</label>
-                    <Field name="description" component="input" type="text" />
+                    <Field name="description"  className={"form-control"} placeholder="What did you buy"
+                           component="input" type="text"/>
                 </div>
-                <div>
+
+                <div className={"form-group"}>
                     <label>Amount</label>
-                    <Field name="value" component="input" type="text" />
+                    <Field name="value" className={"form-control"} component="input" type="text" placeholder="How much did it cost"/>
                 </div>
-                <div>
+
+                <div className={"form-group"}>
                     <label>Currency</label>
-                    <Field name="currency" component="input" type="text" />
+                    <Field name="currency" component="input" className={"form-control"} type="text"
+                           placeholder="Currency"/>
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit">Add</button>
             </form>
         )
     }
