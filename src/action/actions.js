@@ -2,11 +2,11 @@ import axios from 'axios';
 
 export const FETCH_EXPENSES = 'FETCH_EXPENSES';
 export const ADD_EXPENSE = 'ADD_EXPENSE';
-// const BASE_URL = `https://3f0d6b85-aeeb-46a7-9f62-47e974cb992a.mock.pstmn.io`;
-const BASE_URL = `http://localhost:3001`;
 
-export function fetchExpenses() {
-    const response = axios.get(`${BASE_URL}/expenses`);
+const BASE_URL = `https://9067yy8sdl.execute-api.eu-central-1.amazonaws.com/teststage`;
+
+export function fetchExpenses(fromDate, toDate) {
+    const response = axios.get(`${BASE_URL}/expenses?from=${fromDate}&to=${toDate}`);
 
     return (dispatch) => {
         response.then(({data}) => {

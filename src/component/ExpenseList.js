@@ -6,7 +6,7 @@ import ActionPanel from "./ActionPanel";
 
 class ExpenseList extends Component {
     componentDidMount() {
-        this.props.fetchExpenses()
+        this.props.fetchExpenses('2018-08-04', '2018-08-04')
     }
 
     render() {
