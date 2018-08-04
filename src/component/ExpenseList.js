@@ -12,8 +12,8 @@ class ExpenseList extends Component {
     render() {
         return (
             <div id="expense-list-page">
-                <p className={"h1"}>Expenses Summary</p>
                 <ActionPanel />
+                <p className={"h1"}>Expenses Summary</p>
                 <div>
                     <table className={"table table-striped"}>
                         <thead className={"thead-light"}>
@@ -24,7 +24,7 @@ class ExpenseList extends Component {
                         </tr>
                         </thead>
                         <tbody>
-                        {this.props.expenses.map(expense => <Expense expense={expense} key={expense.id}/>)}
+                        {this.props.expenses.map(expense => <Expense expense={expense} key={expense._id} />)}
                         </tbody>
                     </table>
                 </div>

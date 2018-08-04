@@ -13,16 +13,19 @@ class DatesRange extends Component {
 
    render() {
         return (
-            <div id={"dates range"} >f
-                <div className={"form-group"}>
+            <div id={"dates range"} className={"d-inline"}>
+                <div className={"form-group d-inline mr-3"}>
                     <label>From: </label>
                     <input type={"date"} onChange={this.handleFromDateSelection} />
                 </div>
-                <div className={"form-group"}>
+                <div className={"form-group d-inline ml-3"}>
                     <label>To: </label>
                     <input type={"date"} onChange={this.handleToDateSelection} />
                 </div>
-                    <button type="submit" onClick={() => this.props.fetchExpenses(this.state.from, this.state.to)}>Find</button>
+
+                <button type="submit"
+                        onClick={() => this.props.fetchExpenses(this.state.from, this.state.to)}
+                        className={'d-inline btn btn-primary ml-3'}>Find</button>
             </div>
         )
     }
