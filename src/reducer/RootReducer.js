@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import FetchExpenses from './FetchExpenseReducer.js'
+import FetchExpenses from './ExpenseReducer.js'
 import {reducer as formReducer} from 'redux-form'
 
 const rootReducer = combineReducers({

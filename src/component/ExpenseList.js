@@ -21,6 +21,7 @@ class ExpenseList extends Component {
                             <th scope={"col"}>Description</th>
                             <th scope={"col"}>Amount</th>
                             <th scope={"col"}>Currency</th>
+                            <th scope={"col"}>Actions</th>
                         </tr>
                         </thead>
                         <tbody>

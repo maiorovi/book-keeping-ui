@@ -13,7 +13,10 @@ class Expense extends Component {
                 <td>{this.state.expense.description}</td>
                 <td>{this.state.expense.value}</td>
                 <td>{this.state.expense.currency}</td>
-                <td><span className="btn btn-delete" onClick={() => this.handleDelete()}>Delete</span></td>
+                <td>
+                    <span className="btn btn-danger" onClick={() => this.handleDelete()}>Delete</span>
+                    <span className="btn btn-warning ml-2" >Edit</span>
+                </td>
             </tr>
             );
     }
